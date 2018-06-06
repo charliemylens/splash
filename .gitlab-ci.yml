@@ -4,7 +4,7 @@ before_script:
  - which ruby
  - npm install 
  
-blah: 
+test: 
  script: 
   - npm test
 
