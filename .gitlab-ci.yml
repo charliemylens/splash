@@ -10,5 +10,5 @@ test:
 
 coverage: 
  script: 
-  - npm coverage
+  - npm run coverage
 
