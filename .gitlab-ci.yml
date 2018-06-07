@@ -1,7 +1,6 @@
 image: node:latest
 
 before_script:
- - apt-get update -qq && apt-get install -y -qq nodejs
  - nodejs -v
  - npm install 
  
