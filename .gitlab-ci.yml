@@ -1,7 +1,6 @@
 before_script:
  - apt-get update -qq && apt-get install -y -qq nodejs
- - node -v
- - which ruby
+ - nodejs -v
  - npm install 
  
 test: 
