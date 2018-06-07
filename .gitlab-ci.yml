@@ -1,5 +1,6 @@
 before_script:
  - apt-get update -qq && apt-get install -y -qq nodejs
+ - apt-get install npm # This won't work
  - nodejs -v
  - npm install 
  
