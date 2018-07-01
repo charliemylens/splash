@@ -3,6 +3,32 @@
 
 The front-end to exploring lenses
 
+# INSTRUCTIONS
+
+To develop I fistly start tachyons watching for changes...
+
+```sh
+
+cd ./prism
+npm start
+
+```
+
+Now editing the css files in ./src will trigger a rebuild.
+
+## VIEWING THE DEV SERVER 
+
+I just server the folder as a webserver using python...
+
+```sh
+
+python -m SimpleHTTPServer 8000
+
+```
+
+Then I can access the website at ```localhost:8000``` in the browser.
+
+
 # TACHYONS
 
 Functional css for humans.
