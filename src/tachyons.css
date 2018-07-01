@@ -93,6 +93,12 @@
 /* Uncomment out the line below to help debug layout issues */
 /* @import './_debug'; */
 
+/*
+
+  prism splash page.
+
+*/
+
 @font-face {
     font-family: Stellar;
     src: url(/fonts/Stellar/stellar-regular.woff);
@@ -130,3 +136,30 @@
 .selected {
   color: #222;
 }
+
+/* media queries */
+
+
+
+    @media screen and (min-width: 1em) and (max-width: 48em) {
+
+      .hide-small {  display:none!important; visibility: hidden!important; }
+
+      #bottom_slide_left,
+      #bottom_slide_right {
+        width: 100%!important;
+      }
+    }
+
+
+    @media screen and (min-width: 48em) and (max-width: 64em) {
+
+
+      .hide-medium {  display:none!important; visibility: hidden!important; }
+
+    }
+
+
+    @media screen and (min-width: 64em)  {
+
+    }

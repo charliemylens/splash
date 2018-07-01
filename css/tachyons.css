@@ -2029,6 +2029,11 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .debug-grid-16-solid { background: white url( data:image/gif;base64,R0lGODdhEAAQAPEAAADw/wDx/xXy/////ywAAAAAEAAQAAACIZyPKckYDQFsb6ZqD85jZ2+BkwiRFKehhqQCQgDHcgwEBQA7 ) repeat top left; }
 /* Uncomment out the line below to help debug layout issues */
 /* @import './_debug'; */
+/*
+
+  prism splash page.
+
+*/
 @font-face { font-family: Stellar; src: url( /fonts/Stellar/stellar-regular.woff ); }
 * { font-family: Stellar; }
 #cf { position: relative; }
@@ -2037,6 +2042,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .bottom_slider_handles { color: lightgrey; }
 .bottom_slider_handles:hover { cursor: pointer; }
 .selected { color: #222; }
+/* media queries */
 @media screen and (min-width: 30em) {
  .aspect-ratio-ns { height: 0; position: relative; }
  .aspect-ratio--16x9-ns { padding-bottom: 56.25%; }
@@ -3306,4 +3312,12 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .v-top-l { vertical-align: top; }
  .v-btm-l { vertical-align: bottom; }
 }
+@media screen and (min-width: 1em) and (max-width: 48em) {
+ .hide-small { display: none !important; visibility: hidden !important; }
+ #bottom_slide_left, #bottom_slide_right { width: 100% !important; }
+}
+@media screen and (min-width: 48em) and (max-width: 64em) {
+ .hide-medium { display: none !important; visibility: hidden !important; }
+}
+@media screen and (min-width: 64em) { }
 

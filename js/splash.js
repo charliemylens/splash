@@ -390,3 +390,12 @@ slider_handle3.addEventListener('click', function() {
 	oneshots[0].play()
 }, false);
 
+// glitch mobile footer 
+
+var glitch_footer = document.getElementById('glitch_mobile_footer')
+
+var options = [ 'TRUTH', 'IDENTITY', 'SECURITY', 'CONTROL' ]
+
+setInterval(function () {
+	glitch_footer.innerHTML = '| ' + options[Math.floor(Math.random()*options.length)]
+}, 1000)
