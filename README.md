@@ -27,7 +27,7 @@ Now editing the css files in ./src will trigger a rebuild.
 
 ## VIEWING THE DEV SERVER 
 
-I just server the folder as a webserver using python...
+I just serve the folder as a webserver using python...
 
 ```sh
 
