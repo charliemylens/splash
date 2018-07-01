@@ -8,14 +8,14 @@ The front-end to exploring lenses
 If you have no node_modules folder you will need to install dependencies...
 
 ```sh
-
+git clone <repo_url>/prism
 cd ./prism
 npm install
 
 ```
 
 
-To develop I fistly start tachyons watching for changes...
+To develop I firstly start tachyons watching for changes...
 
 ```sh
 
