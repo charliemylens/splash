@@ -4,11 +4,7 @@ before_script:
  - nodejs -v
  - npm install 
  
-test: 
+build: 
  script: 
-  - npm test
-
-coverage: 
- script: 
-  - npm run coverage
+  - npm build
 
