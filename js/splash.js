@@ -37,8 +37,6 @@ function animate_canvas (id) {
 
 }
 
-animate_canvas("opening_canvas")
-animate_canvas("opening_canvas_2")
 
 var ambient = new Howl({
   src: ['/sounds/soundscape/dystopia.wav']
