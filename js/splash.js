@@ -1,131 +1,6 @@
 
 // prism splash page.
 
-function animate_canvas (id) {
-
-	var canvas = document.getElementById(id);
-
-	canvas.width  = 1024
-	canvas.height = 768
-
-	var start = null;
-	var context = canvas.getContext('2d');
-	  	context.imageSmoothingEnabled = true;
-
-	function step(timestamp) {
-	  if (!start) start = timestamp;
-	  	var progress = timestamp - start;
-
-	  	var centerX = canvas.width / 2;
-		var centerY = canvas.height / 2;
-
-	  	context.beginPath();
-	  	context.fillStyle = 'black';
-		context.fill();
-	  	context.clearRect(0,0, canvas.width, canvas.height)
-		
-		var radius = (Math.random() > 0.9) ? Math.min(Math.random()*600) : Math.min(Math.random()*11)
-		context.beginPath();
-		context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-		context.strokeStyle =  'rgb(255,255,255,'+ Math.random()+')';
-		context.lineWidth = Math.floor(Math.random()*11)
-		context.stroke();
-	    window.requestAnimationFrame(step);
-	}
-
-	window.requestAnimationFrame(step);
-
-}
-
-
-var ambient = new Howl({
-  src: ['/sounds/soundscape/dystopia.wav']
-});
-
-var dialup = new Howl({
-  src: ['/sounds/soundscape/dialup2.wav']
-});
-
-dialup.play()
-
-
-var brainwashing = new Howl({
-  src: ['/sounds/soundscape/brainwashing.wav']
-})
-
-setInterval(function () {
-	brainwashing.play();
-}, 110000)
-
-var darkrave = new Howl({
-  src: ['/sounds/soundscape/serveroom.wav']
-})
-
-setTimeout(function () {
-	dialup.play();
-	darkrave.play();
-}, 60000)
-
-
-setInterval(function () {
-	darkrave.play();
-}, 30000)
-
-// one shots
-var blip = new Howl({
-  src: ['/sounds/oneshot/blip.wav']
-})
-
-var burp = new Howl({
-  src: ['/sounds/oneshot/burp.wav']
-})
-
-var delay = new Howl({
-  src: ['/sounds/oneshot/delay.wav']
-})
-
-var doublezap = new Howl({
-  src: ['/sounds/oneshot/doublezap.wav']
-})
-
-var multizap = new Howl({
-  src: ['/sounds/oneshot/multizap.wav']
-})
-
-var whist = new Howl({
-  src: ['/sounds/oneshot/zap.wav']
-})
-
-var oneshots = [
-	blip,
-	burp,
-	delay,
-	doublezap,
-	multizap,
-	whist
-]
-
-// glitches
-
-var glitch = new Howl({
-  src: ['/sounds/glitches/glitch.wav']
-});
-
-var insane = new Howl({
-  src: ['/sounds/glitches/insane.wav']
-});
-
-var long = new Howl({
-  src: ['/sounds/glitches/long.wav']
-});
-
-var short = new Howl({
-  src: ['/sounds/glitches/short.wav']
-});
-
-var glitches = [
-	short
-]
 
 setInterval(function () {
 	var glitch1 = document.getElementById('glitch-1')
@@ -143,7 +18,6 @@ setInterval(function () {
 		glitch1.innerHTML = Math.random()
 	}, 50)
 
-	glitches[Math.floor(Math.random()*glitches.length)].play()
 
 	setTimeout(function () {
 		clearInterval(numbers)
@@ -160,8 +34,6 @@ var virtual_you = [
 ]
 
 setInterval(function () {
-
-	oneshots[Math.floor(Math.random()*oneshots.length)].play()
 
 	var glitch = setInterval(function () {
 		glitch2.innerHTML = virtual_you[Math.floor(Math.random()*virtual_you.length)]
@@ -212,14 +84,6 @@ function isVisible(elem) {
 
 var presenting_lens = true;
 
-document.onscroll = function () {
-	var lens = document.getElementById('lens_show')
-	if (isVisible(lens) && presenting_lens) {
-		ambient.play();
-		presenting_lens = false
-	}
-}
-
 // average user has ...
 var counter1_incro = Math.floor(Math.random() * 99)
 var counter2_incro = Math.floor(Math.random() * 9999999)
@@ -261,7 +125,6 @@ setInterval(function () {
 		glitch1.innerHTML = Math.random()
 	}, 50)
 
-	oneshots[Math.floor(Math.random()*oneshots.length)].play()
 
 	setTimeout(function () {
 		clearInterval(numbers)
@@ -363,7 +226,6 @@ slider_handle1.addEventListener('click', function() {
 	slider_handle2.classList.remove("selected")
 	slider_handle3.classList.remove("selected")
 	slider_handle1.classList.add("selected")
-	oneshots[0].play()
 }, false);
 
 
@@ -374,7 +236,6 @@ slider_handle2.addEventListener('click', function() {
 	slider_handle2.classList.remove("selected")
 	slider_handle3.classList.remove("selected")
 	slider_handle2.classList.add("selected")
-	oneshots[0].play()
 }, false);
 
 
@@ -385,7 +246,6 @@ slider_handle3.addEventListener('click', function() {
 	slider_handle2.classList.remove("selected")
 	slider_handle3.classList.remove("selected")
 	slider_handle3.classList.add("selected")
-	oneshots[0].play()
 }, false);
 
 // glitch mobile footer 
